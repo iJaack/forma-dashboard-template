@@ -1,0 +1,4 @@
+# Obviously fake, local-only values. Never use these on a deployed site.
+SITE_PASSWORD=change-me-local
+SESSION_KEY=local-only-fake-session-key-change-before-deployment
+INGEST_SECRET=change-me-local-ingest

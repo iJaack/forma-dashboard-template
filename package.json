@@ -1,0 +1,17 @@
+{
+  "name": "forma-dashboard-template",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node tests/run.mjs && node tests/gate.mjs && node tests/config.mjs && node tests/sql.mjs",
+    "test:e2e": "node tests/e2e-local.mjs",
+    "db:migrate:local": "wrangler d1 migrations apply DB --local",
+    "db:migrate:remote": "wrangler d1 migrations apply DB --remote",
+    "dev": "npm run build && wrangler dev --local",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": { "wrangler": "^4" }
+}

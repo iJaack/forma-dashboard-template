@@ -1,0 +1,42 @@
+# Secrets — never commit
+secrets/
+*.env
+.env*
+# Personal health data, audits and screenshots with real values
+AUDIT.md
+MEALS-API.md
+/audit/
+/concepts/
+/shots/
+preview-*.png
+*.png
+*.mp4
+*.json.bak
+# Mockup generator with real values from a specific day
+/gen_src.py
+# Build output (bundles the worker; may embed data)
+/dist/
+/build/
+dist_worker.js
+deploy_worker_code.js
+# Local / tooling
+node_modules/
+.wrangler/
+.DS_Store
+*_export/
+diet_*/
+piano_alimentare*
+
+# Local deployment configuration and database files
+wrangler.toml
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+*.sqlite*
+*.db
+*.db-*
+*.sql.gz
+*.dump
+*.log
+config.json
+/output/
