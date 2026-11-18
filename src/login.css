@@ -1,0 +1,20 @@
+/* Forma — login page (data-free, public). Solid top bar; form is open with hairlines. */
+html[data-theme="light"]{--hair:rgba(18,18,16,.14);--t2:rgba(18,18,16,.70)}
+html[data-theme="dark"]{--hair:rgba(246,243,238,.16);--t2:rgba(246,243,238,.72)}
+body.lgn-b{background:var(--bg)}
+.lgn-b .lg-top{background:var(--surface);border:1px solid var(--border);border-radius:999px}
+.lgn{min-height:100vh;min-height:100dvh;display:grid;place-items:center;padding:calc(88px + var(--safe-t,env(safe-area-inset-top,0px))) max(20px,var(--safe-r,env(safe-area-inset-right,0px))) max(32px,var(--safe-b,env(safe-area-inset-bottom,0px))) max(20px,var(--safe-l,env(safe-area-inset-left,0px)))}
+.lgn-f{width:min(440px,100%)}
+.lgn-f .lab{display:block;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--t2);margin:0}
+.lgn-f h1{margin:8px 0 0;font-size:clamp(32px,4vw,44px);font-weight:750;letter-spacing:-.03em;line-height:1.05}
+.lgn-f .lede{margin:8px 0 28px;font-size:16px;line-height:1.5;color:var(--t2)}
+.lgn-f label.lab{margin-bottom:8px}
+.lgn-f .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:8px 0}
+.lgn-f input{flex:1;min-width:0;min-height:44px;font:500 17px/1.3 inherit;color:var(--ink);background:transparent;border:0;padding:10px 4px;outline:none}
+.lgn-f input:focus-visible{box-shadow:0 2px 0 0 var(--accent)}
+.lgn-f button{font:600 15px/1 inherit;color:var(--bg);background:var(--ink);border:0;border-radius:999px;padding:12px 22px;cursor:pointer;min-height:44px}
+.lgn-f button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.lgn-f .err{margin:12px 0 0;font-size:15px;font-weight:600;color:var(--fail,#c4312a)}
+html[data-theme="dark"] .lgn-f .err{color:#ff8a80}
+.lgn-f .note{margin:16px 0 0;font-size:13.5px;color:var(--t2)}
+.lg-top .wordmark{cursor:default}

@@ -1,0 +1,30 @@
+name = "forma-dashboard"
+main = "build/worker.js"
+compatibility_date = "2026-11-01"
+workers_dev = true
+
+# Optional: your domain must be a zone in your own account.
+# routes = [{ pattern = "dash.example.com", custom_domain = true }]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "forma-health"
+database_id = "REPLACE_WITH_YOUR_DATABASE_ID"
+migrations_dir = "migrations"
+
+[vars]
+D1_BINDING = "DB"
+DEFAULT_TZ = "UTC"
+# SITE_LABEL defaults to the request host.
+# SITE_LABEL = "dash.example.com"
+DAY_TYPES = "riposo,allenamento"
+# No calorie estimates by default. Set only targets you have chosen for yourself.
+# TARGETS = '{"estimates":{"riposo":2000},"protein":{"base":100,"threshold":2200,"slope":0.1,"cap":140},"fat":{"lo":0.25,"hi":0.30},"fiber":30}'
+
+# Optional Access settings: no Access requests occur unless a full group is set.
+# ACCESS_TEAM = "your-team.cloudflareaccess.com"
+# ACCESS_AUD_MAIN = "REPLACE_WITH_MAIN_AUDIENCE"
+# ALLOWED_EMAIL = "owner@example.com"
+# ACCESS_AUD_INGEST = "REPLACE_WITH_INGEST_AUDIENCE"
+# INGEST_CLIENT_ID = "REPLACE_WITH_SERVICE_TOKEN_CLIENT_ID"
+# All secrets go through wrangler secret put; never put them here.
